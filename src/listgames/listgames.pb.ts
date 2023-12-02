@@ -6,7 +6,7 @@ export const protobufPackage = "listgames";
 
 export interface CreateListGamesRequest {
   name: string;
-  games: string[];
+  gameid: number;
   userId: number;
 }
 
