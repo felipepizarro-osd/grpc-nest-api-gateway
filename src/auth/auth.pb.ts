@@ -11,7 +11,7 @@ export interface RegisterRequest {
 }
 
 export interface RegisterResponse {
-  status: string;
+  status: number;
   error: string[];
 }
 
