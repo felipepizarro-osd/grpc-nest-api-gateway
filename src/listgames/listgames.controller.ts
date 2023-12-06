@@ -38,7 +38,7 @@ export class ListgamesController implements OnModuleInit {
   }
 
   @Post('Create')
-  //@UseGuards(AuthGuard)
+  @UseGuards(AuthGuard)
   private async CreateListGames(
     @Req() req: Request,
   ): Promise<Observable<CreateListGamesResponse>> {
@@ -48,7 +48,7 @@ export class ListgamesController implements OnModuleInit {
   }
 
   @Post('AddGame')
-  //@UseGuards(AuthGuard)
+  @UseGuards(AuthGuard)
   private async AddGameToList(
     @Req() req: Request,
   ): Promise<Observable<AddGamesToListResponse>> {
@@ -57,7 +57,7 @@ export class ListgamesController implements OnModuleInit {
     return this.svc.addGamesToList(body);
   }
   @Delete('DeletelistGame')
-  //@UseGuards(AuthGuard)
+  @UseGuards(AuthGuard)
   private async DeleteGameFromList(
     @Req() req: Request,
   ): Promise<Observable<DeleteGameFromListResponse>> {
@@ -66,7 +66,7 @@ export class ListgamesController implements OnModuleInit {
     return this.svc.deleteGameFromList(body);
   }
   @Get('GetGames')
-  //@UseGuards(AuthGuard)
+  @UseGuards(AuthGuard)
   private async GetGamesInList(
     @Req() req: Request,
   ): Promise<Observable<GetGamesInListResponse>> {
