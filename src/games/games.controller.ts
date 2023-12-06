@@ -29,14 +29,14 @@ export class GamesController implements OnModuleInit {
     this.svc = this.client.getService<GamesServiceClient>(GAMES_SERVICE_NAME);
   }
   @Post()
-  @UseGuards(AuthGuard)
+  //@UseGuards(AuthGuard)
   private async createGame(
     @Body() body: CreateGameRequest,
   ): Promise<Observable<CreateGameResponse>> {
     return this.svc.createGame(body);
   }
   @Get(':id')
-  @UseGuards(AuthGuard)
+  //@UseGuards(AuthGuard)
   private async getGame(
     @Param('id', ParseIntPipe) id: number,
   ): Promise<Observable<GetGameResponse>> {
